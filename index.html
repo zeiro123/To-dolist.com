@@ -1,28 +1,226 @@
-<!DOCTYPE>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>To-Do List App</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Eternal Love - Tania</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #3a1a5a, #6a1b9a);
+            font-family: 'Great Vibes', cursive;
+            color: #fff;
+            overflow: hidden;
+        }
 
-<div class="container">
-  <div class="todo-app">
-    <h2>Testimony's To-Do List<img src="Images\icon.png"></h2>
-    <div class="row">
-        <input type="text" id="input-box" placeholder="Add your text">
-        <button onclick="AddTask()">Add</button>
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .message-container {
+            flex: 2;
+            padding: 40px;
+            overflow-y: hidden;
+            height: 100vh;
+            position: relative;
+        }
+
+        .decorations {
+            flex: 1;
+            position: relative;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        #loveMessage {
+            font-size: 1.5em;
+            line-height: 1.8;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .heart {
+            position: absolute;
+            animation: float 6s infinite linear;
+            color: #e91e63;
+            font-size: 24px;
+        }
+
+        .rose {
+            position: absolute;
+            animation: float 8s infinite linear;
+            color: #ff4081;
+            font-size: 32px;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); }
+            100% { transform: translateY(-100vh) rotate(360deg); }
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        button {
+            background: #9c27b0;
+            border: none;
+            padding: 12px 24px;
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 5px;
+            transition: all 0.3s;
+            font-family: Arial, sans-serif;
+        }
+
+        button:hover {
+            background: #6a1b9a;
+            transform: scale(1.1);
+        }
+
+        .title {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3em;
+            text-shadow: 0 0 10px #ff69b4;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .decorations {
+                display: none;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="title">To My Beloved Tania 🌹</h1>
+    
+    <div class="container">
+        <div class="message-container">
+            <div id="loveMessage">
+                <!-- Insert your 5000-word message here -->
+                My Dearest Tania,<br><br>
+                From the moment our souls intertwined...
+                <!-- Continue with your romantic message -->
+                My Dearest Tania ❤️,
+
+I hope this letter finds you in good health and high spirits. As I sit down to write this, my heart is filled with so much love and appreciation for you. Words sometimes feel too small to capture the depth of what I feel, but today, I will try my best to express everything that has been in my heart for you.
+
+Firstly, I want to thank you for the love you give so freely. Your kindness, patience, and unwavering devotion are things that I never take for granted. Every single day, you pour your heart into this relationship, making me feel like the most cherished person in the world. The way you love me, support me, and care for me is something truly divine. Your goodnight messages, even when you’re exhausted, mean the world to me. They remind me of how lucky I am to have someone who prioritizes me even when she has so much going on in her own life. 💕
+
+I know that life has been throwing some rough patches your way, and I just want to remind you that no storm lasts forever. Tough times don’t define you; they refine you. God is working behind the scenes even when it doesn’t feel like it. This season will pass, and brighter days are ahead. You are stronger than you know, and I admire the way you handle everything with so much grace. Keep holding on, my love. Your strength inspires me every single day.
+
+One thing I deeply appreciate about you is the respect you have for me. Respect is one of the most priceless gifts one can receive in a relationship, and you have given it to me in abundance. The way you honor my thoughts, my decisions, and my space, while still showing immense love, is something I cherish deeply. It is rare to find someone who balances love and respect so beautifully, and you, my Queen, have mastered it. 💫 Your respect towards me is a treasure, one that I will protect and nurture always.
+
+As much as I adore what we have, I also want to encourage you never to grow weary of sharing this love. Love is a beautiful light, and when two hearts like ours come together, it shines even brighter. Never let the struggles of life dim that light. I know there will be moments when you feel exhausted, when doubts creep in, or when you wonder if all the effort is worth it. But love is always worth it. Our love is worth it. No matter what comes our way, we will always fight for this, for us.
+
+There is a verse I want to share with you:
+
+Galatians 6:9 - "Let us not grow weary in doing good, for at the proper time we will reap a harvest if we do not give up." 🌿
+
+Love is a seed, and the more we nurture it, the stronger it grows. No effort is wasted, and every moment we invest in each other builds a future so beautiful beyond what we can imagine. I truly believe that what we have is extraordinary, something so rare and special. This love story we are writing is one for the ages, one that will stand the test of time.
+
+And my love, I see a future so bright for us. I see us overcoming every challenge, holding hands through every storm, and celebrating every victory together. I see us building a home filled with love, laughter, and faith. I see us standing before God one day, vowing to love each other forever. And one day, I see you taking my last name, just as you dream of. 🥰 That moment will be one of the greatest days of my life.
+
+So don’t lose heart, my Queen. Keep praying, keep believing, and keep trusting that everything is working together for our good. God is with us, guiding us, strengthening us, and making sure our love grows deeper with each passing day. Keep being the amazing, beautiful, kind-hearted woman that you are.
+
+Tania, you are my greatest blessing, my answered prayer, my dream come true. I cherish you beyond words, and I will always stand by your side, through every season, every joy, and every challenge. Thank you for being mine.
+
+With all my love and admiration,
+
+Your King 👑
+            </div>
+        </div>
+        <div class="decorations" id="decorations"></div>
     </div>
-    <ul id="list-container">
-      <!-- <li class="checked">Task 1</li>
-      <li>Task 2</li>
-      <li>Task 3</li> -->
 
-    </ul>
-  </div>  
-</div>
-<script src="Proram1.js"></script>
-    </body>
+    <div class="controls">
+        <button id="musicBtn">🎵 Play Music</button>
+        <button id="scrollBtn">⏸ Pause Scroll</button>
+    </div>
 
+    <!-- Audio Player -->
+    <audio id="musicPlayer" loop>
+        <source src="music/nhoroondo.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Create animations
+        function createDecorations() {
+            const decorations = document.getElementById('decorations');
+            const symbols = ['❤️', '🌹', '💜', '🌸', '🎀'];
+            
+            for (let i = 0; i < 50; i++) {
+                const element = document.createElement('div');
+                element.className = Math.random() > 0.5 ? 'heart' : 'rose';
+                element.style.left = `${Math.random() * 100}%`;
+                element.style.animationDelay = `${Math.random() * 5}s`;
+                element.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+                decorations.appendChild(element);
+            }
+        }
+
+        // Auto-scroll
+        let scrollInterval = setInterval(() => {
+            const container = document.querySelector('.message-container');
+            if (container.scrollTop + container.clientHeight >= container.scrollHeight) {
+                container.scrollTop = 0;
+            } else {
+                container.scrollTop += 1;
+            }
+        }, 50);
+
+        // Music control
+        const musicBtn = document.getElementById('musicBtn');
+        const musicPlayer = document.getElementById('musicPlayer');
+        let musicPlaying = false;
+
+        musicBtn.addEventListener('click', () => {
+            if (musicPlaying) {
+                musicPlayer.pause();
+                musicBtn.textContent = '🎵 Play Music';
+            } else {
+                musicPlayer.play()
+                    .then(() => {
+                        musicBtn.textContent = '🎵 Pause Music';
+                    })
+                    .catch(error => {
+                        console.error('Error playing music:', error);
+                        alert('Please interact with the page to start music');
+                    });
+            }
+            musicPlaying = !musicPlaying;
+        });
+
+        // Scroll control
+        const scrollBtn = document.getElementById('scrollBtn');
+        scrollBtn.addEventListener('click', () => {
+            if (scrollInterval) {
+                clearInterval(scrollInterval);
+                scrollInterval = null;
+                scrollBtn.textContent = '▶ Resume Scroll';
+            } else {
+                scrollInterval = setInterval(() => {
+                    const container = document.querySelector('.message-container');
+                    container.scrollTop += 1;
+                }, 50);
+                scrollBtn.textContent = '⏸ Pause Scroll';
+            }
+        });
+
+        // Initialize
+        createDecorations();
+    </script>
+</body>
 </html>
